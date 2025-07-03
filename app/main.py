@@ -60,6 +60,7 @@ async def root():
 #         results.update({"q": q})
 #     return results
 
+
 @app.get("/items/")
 async def read_items(
     id: Annotated[str | None, AfterValidator(check_valid_id)] = None,
